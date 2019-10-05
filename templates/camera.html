@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<style type="text/css">
+	.brands{
+		border: 3px solid grey;
+		margin: 30px 10%;
+		height: 400px;
+		padding: 60px;
+	}
+	.b-box img{
+		border: 3px solid white;
+		padding: 30px;
+		margin-top: 30px;
+		margin-left: 5%;
+		
+		width:  180px;
+		height: 180px;
+	}
+
+	.b-box img:hover{
+		border: 2px solid lightgrey;
+		size: 2500px;
+	}
+
+	.b-box h1{
+		color: orange;
+		text-align: center;
+	}
+</style>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"> </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<title>Camera | Welcome</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+	
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div id="branding">
+			<h1 class="logo">
+            <span class="word2">PriceMania</span></h1>
+        </div>
+			
+			<nav>
+				<ul>
+					<li class="current"><a href="/">HOME</a></li>
+					<li class="current"><a href="/login" >login </a></li>
+					<li class="current"><a href="/about"  target="_blank">about</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	
+
+	<section class="pbox">
+		<div class="product">
+			<a href="/mobiles" ><i class="fa fa-mobile fa-5x" aria-hidden="true"></i></a>
+			<a href="/laptops" ><i class="fa fa-laptop fa-5x" aria-hidden="true"></i></a>
+			<a href="#" ><i class="fa fa-camera fa-5x" aria-hidden="true"></i></a>
+			<a href="/tv"><i class="fa fa-television fa-5x" aria-hidden="true"></i></a>
+		</div>
+	</section>
+
+	<section class="brands">
+		<div class="b-box">
+			<h1>CAMERA</h1>
+			<img src="static/logos/canon.jpg">
+			<img src="static/logos/nikon.jpg">
+			<img src="static/logos/fujifilm.jpg">
+			<img src="static/logos/sony.png">
+		</div>
+		
+	</section>
+
+	<section id="newsletter">
+		<div class="container">
+			<h1>Subscribe for latest updates</h1>
+			<form>
+				<input type="email" name="enter email">
+				<button type="submit" class="button1">Subscribe</button>
+			</form>
+		</div>
+	</section>
+	<footer>
+		<p>Pricemania , Copyright &copy; 2019</p>
+	</footer>
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<style type="text/css">
+	.head{
+		border: 2px solid grey;
+		margin: 20px 10%;
+	}
+	.head h1{
+		text-align: center;
+
+	}
+
+	.head p{
+		margin-left: 30px;
+	}
+	
+	table{
+		
+		margin-left:100px;
+
+	}
+
+
+	
+	th img{
+		margin:30px 250px 20px 60px ;
+		transform: scale(2.0);
+	}
+</style>
+<html>
+<head>
+   <title> tv compare</title>
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"> </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+		
+		$(function() {
+
+            causeRepaintsOn = $("h1, h2, h3, p");
+
+            $(window).resize(function() {
+                causeRepaintsOn.css("z-index", 1);
+            });
+
+        });
+	</script>
+  
+</head>
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+<body>
+	<header>
+		<div class="container">
+			<div id="branding">
+			<h1 class="wrap">PriceMania</h1>
+        </div>
+			
+			<nav>
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li class="current"><a href="login.html" target="_blank">login </a></li>
+					<li class="current"><a href="about.html"  target="_blank">about</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<section class="pbox">
+		<div class="product">
+			<a href="/mobiles" ><i class="fa fa-mobile fa-5x" aria-hidden="true"></i></a>
+			<a href="/laptops" ><i class="fa fa-laptop fa-5x" aria-hidden="true"></i></a>
+			<a href="/tv"  ><i class="fa fa-television fa-5x" aria-hidden="true"></i></a>
+		</div>
+	</section>
+
+	<section class="head">
+		<h1>{{tvprodetails}}</h1>
+		<br>
+
+		<table>
+			<tr>
+				<th>
+				    <img  src="{{product_images_compare[0]}}" width="100">
+				    
+			  	</th>
+			  	<th>
+			  	<table border="1" class="dataframe">
+  					<thead>
+    					<tr style="text-align: right;">
+					      
+					     <th><center>Websites</center></th>
+					      <th><strong>Prices</strong>   </th>
+    					</tr>
+  					</thead>
+  					<tbody>
+  					{%for i in range(0, j)%}
+    				<tr>
+      
+      					<td><img src="{{companylogo[i]}}" width="100px"></td>
+      					<td>{{tvprices[i]}}</td>
+    				</tr>
+   					{%endfor%}
+    
+  					</tbody>
+				</table>
+			 	
+				</th>
+			</tr> 
+	    </table>
+	    <h1 style="color: white;">.</h1>
+	</section>
+	<section id="newsletter">
+		<div class="container">
+			<h1>Subscribe for latest updates</h1>
+			<form>
+				<input type="email" name="enter email">
+				<button type="submit" class="button1">Subscribe</button>
+			</form>
+		</div>
+	</section>
+	<footer>
+		<p>Pricemania , Copyright &copy; 2019</p>
+	</footer>
+
+</body>
+</html>

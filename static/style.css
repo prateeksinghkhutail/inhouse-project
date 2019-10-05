@@ -1,0 +1,351 @@
+@import "compass/css3";
+
+@import "compass/css3/transform";
+@import url(https://fonts.googleapis.com/css?family=Bangers);
+
+body{
+	font-family:Comic Sans MS;
+  font-size: :15px;
+  line-height:1.5
+  font:15px/1.5 Arial,Helvetica,sans-serif;
+  padding:0;
+  margin:0;
+  background-color:#ffffff;
+}
+
+/*global*/
+.container{
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+}
+
+/*header*/
+
+header{
+	background: #282828;
+	color: #ffffff;
+	padding-top: 30px;
+	min-height: 100px;
+	border-bottom: #e8491d 1px solid;
+	
+}
+
+nav a{
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 22px;
+}
+
+
+header li{
+	float: left;
+	display: inline;
+	margin-right: -20px;
+	padding: 20px 30px 20px 30px;
+}
+
+header #branding{
+	float: left;
+}
+
+.wrap {
+  text-align: center;
+  font-weight: normal;
+  color: #FFA500;
+  text-transform: uppercase;
+  font-size: 2em;
+  white-space: nowrap;
+  font-size: 7vw;
+  z-index: 1000;
+  font-family: 'Bangers', cursive;
+  text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.7);
+  @include skew(0, -6.7deg, false);
+  @include transition-property(font-size);
+  @include transition-duration(0.5s);
+ 
+}
+
+@media screen and (max-width: 50em) {
+  .wrap {
+    font-size: 15vw;
+   }
+}
+
+
+
+
+header .highlight, header .current a{
+	color: #e8491d;
+	font-weight: bold;
+}
+
+
+header nav{
+	float: right;
+	margin-top: 10px;
+}
+
+header a:hover{
+	color: #cccccc;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+
+/*show case*/
+
+#showcase{
+	min-height: 400px;
+	background: url('background2.jpg') 0 80px  ;
+	text-align: center;
+
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+  text-align: center;
+  color:#ffffff ;
+  
+
+	color: pink;
+	border-bottom: 1px solid red;
+
+}
+
+#showcase h1{
+  margin-top:100px;
+  font-size:66px;
+  margin-bottom:10px;
+  color: white;
+}
+
+#showcase p{
+  font-size: 30px;
+
+  color: white;
+}
+/* slider image*/
+
+.slider{
+	width:100%;
+	height: 400px;
+	overflow: hidden;
+
+}
+
+.middle{
+	position: relative;
+	top: 200px;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.slider_box{
+	position:relative;
+	width:400%;
+	height: 100%;
+	display: flex;
+
+	
+}
+
+.navigation{
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+}
+
+.bar{
+	width: 50px;
+	height: 10px;
+	border: 2px solid #fff;
+	margin: 6px;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.bar:hover{
+	background: #000;
+}
+
+input[name="r"]{
+	position: relative;
+	visibility: hidden;
+}
+
+.slide{
+	width: 25%;
+	transition: 0.6s;
+}
+
+.slide img{
+	width: 100%;
+	height: 100%;
+
+}
+
+#r1:checked ~ .s1{
+	margin-left: 0;
+}
+
+#r2:checked ~ .s1{
+	margin-left: -25%;
+}
+
+#r3:checked ~ .s1{
+	margin-left: -50%;
+}
+
+#r4:checked ~ .s1{
+	margin-left: -75%;
+}
+
+/*
+.sliderbox img
+{
+	float:left;
+}
+@keyframes slideranimation
+{
+
+	0%{
+		left:0px;
+	}
+	20%{
+		left: 0px;
+	}
+/*	25%{
+		left:-10px;
+	}*/
+/*	45%{
+		left: 0px;
+	}
+
+	50%{
+		left:-1535px
+	}
+
+/*	70%{
+		left: -3100px;
+	}
+	75%{
+		left: -4750px;
+	}*/
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 140%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: white;
+}
+
+/* news letter*/
+#newsletter{
+	padding: 15px;
+	color: #ffffff;
+	background: #35424a;
+}
+
+#newsletter h1{
+	float: left;
+}
+
+#newsletter form{
+	float: right;
+	margin-top: 15px;
+}
+
+
+#newsletter input[type="email"]{
+	padding: 4px;
+
+}
+
+
+.pbox{
+	border: 2px solid white;
+	margin: 0;
+	padding: 0;
+    min-width: 800px;
+	width:100%;
+	height: 150px;
+}
+
+.product{
+	padding-left: 31%;
+	margin-top: 35px;
+
+}
+
+
+.product i{
+
+	display: inline;
+	margin-right: 50px; 
+
+	padding: 20px 50px 20px 50px;
+	border:2px solid grey;
+	border-radius: 8px;
+
+}
+
+.product a{
+	color: black;
+	text-decoration: none;
+}
+
+.product i:hover{
+	background-color: lightgrey ;
+}
+
+footer{
+	padding: 20px;
+	margin-top: 0px;
+	color: #ffffff;
+	background-color: #e8491d;
+	text-align: center;
+}
+
+#hero{
+	background-image: url('picture.jpg');
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+	top:0;
+	bottom:0;
+	height:100vh;
+	z-index:-10;
+}
+
+  
+
+
+

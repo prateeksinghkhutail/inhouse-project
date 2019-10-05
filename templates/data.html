@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>compare</title>
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"> </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
+</head>
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+<body>
+	<header>
+    <div class="container">
+      <div id="branding">
+      <h1 class="logo">
+            <span class="word2">PriceMania</span></h1>
+        </div>
+
+      <nav>
+        <ul>
+          <li><a href="/">HOME</a></li>
+          <li class="current"><a href="/login" target="_blank">login </a><a href="signup.html" target="_blank">/ signup</a></li>
+          <li class="current"><a href="/about"  target="_blank">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+<section>
+<h1>{{mobileprodetails}}</h1>
+<P>{{mobiledetails}}</P>
+</section>
+<div class="pricestable">
+<table >
+      
+      
+      
+      <tr class="tabledata">
+        <th>
+          <div class="image">
+              <!--<img src="{{images}}" width="100">-->
+           </div>
+        </th>
+        <th>
+        
+		{{data | safe}}    
+      
+     	</th>
+     </tr>
+    </table>
+
+
+</div>
+</body>
+</html>
